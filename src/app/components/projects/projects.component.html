@@ -1,0 +1,82 @@
+<!-- <div class="project-list">
+    <p-card *ngFor="let project of projects">
+        <ng-template pTemplate="header">
+            <div class="card-header">
+                <h3>Project Name: {{ project.projectName }}</h3>
+                <p>City: {{ project.city }}</p>
+            </div>
+        </ng-template>
+        <p>Address: {{ project.address }}</p>
+        <p>Phone: {{ project.phone }}</p>
+        
+        <ng-template pTemplate="footer">
+            <button pButton type="button" label="Delete" (click)="deleteProject(project.id)" icon="pi pi-times"></button>
+            <button pButton type="button" label="Details" [routerLink]="['/projects', project.id]" icon="pi pi-info"></button>
+            <button pButton type="button" label="Edit" [routerLink]="['/projects/edit', project.id]" icon="pi pi-pencil"></button>
+        </ng-template>
+    </p-card>
+</div> -->
+<!-- Projects Table with PrimeNG -->
+<!-- <div class="table-filter-container">
+    <p-table #dt [value]="projects" [paginator]="true" [rows]="10" [globalFilterFields]="['projectName', 'city', 'address', 'phone']" sortField="projectName" sortMode="single">
+        <ng-template pTemplate="caption">
+          
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="projectName">Project Name <p-sortIcon field="projectName"></p-sortIcon></th>
+                <th pSortableColumn="city">City <p-sortIcon field="city"></p-sortIcon></th>
+                <th pSortableColumn="address">Address <p-sortIcon field="address"></p-sortIcon></th>
+                <th pSortableColumn="phone">Phone <p-sortIcon field="phone"></p-sortIcon></th>
+                <th>Action</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-project>
+            <tr>
+                <td>{{ project.projectName }}</td>
+                <td>{{ project.city }}</td>
+                <td>{{ project.address }}</td>
+                <td>{{ project.phone }}</td>
+                <td>
+                    <button pButton type="button" icon="pi pi-times" class="p-button-rounded p-button-danger" (click)="deleteProject(project.id)" label="Delete"></button>
+                    <button pButton type="button" icon="pi pi-info" class="p-button-rounded p-button-info" [routerLink]="['/projects', project.id]" label="Details"></button>
+                    <button pButton type="button" icon="pi pi-pencil" class="p-button-rounded p-button-success" [routerLink]="['/projects/edit', project.id]" label="Edit"></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div> -->
+<!-- Projects Table with PrimeNG -->
+<div class="table-filter-container">
+    <p-table #dt [value]="projects" [paginator]="true" [rows]="5" [globalFilterFields]="['projectName', 'city', 'address', 'phone']" sortField="projectName" sortMode="single"     [scrollable]="true" 
+    scrollHeight="400px">>
+       
+        <ng-template pTemplate="header">
+            <tr>
+                <th pSortableColumn="projectName">Project Name <p-sortIcon field="projectName"></p-sortIcon></th>
+                <th pSortableColumn="city">City <p-sortIcon field="city"></p-sortIcon></th>
+                <th pSortableColumn="address">Address <p-sortIcon field="address"></p-sortIcon></th>
+                <th pSortableColumn="phone">Phone <p-sortIcon field="phone"></p-sortIcon></th>
+                <th>Action</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-project>
+            <tr>
+                <td>{{ project.projectName }}</td>
+                <td>{{ project.city }}</td>
+                <td>{{ project.address }}</td>
+                <td>{{ project.phone }}</td>
+                <!-- <td>
+                    <button pButton type="button" icon="pi pi-times" class="p-button-rounded p-button-danger" (click)="deleteProject(project.id)" label="Delete"></button>
+                    <button pButton type="button" icon="pi pi-info" class="p-button-rounded p-button-info" [routerLink]="['/projects', project.id]" label="Details"></button>
+                    <button pButton type="button" icon="pi pi-pencil" class="p-button-rounded p-button-success" [routerLink]="['/projects/edit', project.id]" label="Edit"></button>
+                </td> -->
+                <td>
+                    <button pButton type="button" icon="pi pi-times" class="p-button-sm p-button-rounded p-button-danger" (click)="deleteProject(project.id)" label="Delete"></button>
+                    <button pButton type="button" icon="pi pi-eye" class="p-button-sm p-button-rounded p-button-info" [routerLink]="['/projects', project.id]" label="Details"></button>
+                    <button pButton type="button" icon="pi pi-pencil" class="p-button-sm p-button-rounded p-button-success" [routerLink]="['/projects/edit', project.id]" label="Edit"></button>
+                </td>
+                
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

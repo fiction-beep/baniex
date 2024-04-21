@@ -1,0 +1,21 @@
+
+
+<ng-container *ngIf="project">
+    <div class="project-details-container">
+        <div class="header-area">
+            <h1 class="header-title">{{ project.projectName }} </h1>
+        </div>
+        
+        <div class="details-body">
+            <p class="detail-item"><span class="detail-label">City:</span> {{ project.city }}</p>
+            <p class="detail-item"><span class="detail-label">Address:</span> {{ project.address }}</p>
+
+            <p class="detail-item"><span class="detail-label">phone:</span> {{ project.phone }}</p>
+        </div>
+
+        <div class="footer-area">
+            <button class="ui-button" (click)="goBack()">Back to Projects</button>
+        </div>
+    </div>
+</ng-container>
+

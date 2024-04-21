@@ -1,0 +1,16 @@
+.toolbar {
+    background-color: #007bff; /* Bootstrap primary color for demonstration */
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .toolbar-link {
+    margin-right: 10px; /* Space between buttons */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .p-button-text {
+    color: #ffffff; /* Text color for buttons */
+  }
+  

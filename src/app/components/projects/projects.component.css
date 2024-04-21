@@ -1,0 +1,27 @@
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+p-card {
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+p-card:hover {
+    transform: translateY(-5px);
+}
+
+p-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+button[pButton] {
+    margin: 5px;
+}

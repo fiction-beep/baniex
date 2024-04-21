@@ -1,0 +1,90 @@
+* {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputtext-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 480px; /* Increased max-width for larger input boxes */
+}
+
+.inputtext-wrapper + .inputtext-wrapper,
+.inputtext-wrapper + .button-wrapper {
+    margin-top: 28px;
+}
+
+.inputtext {
+    width: 100%;
+}
+
+.inputtext label {
+    color: #00061A; /* $text--main-900 */
+    font-weight: 500;
+    margin-bottom: 6px;
+    font-size: 16px; /* Increased font size for better visibility */
+}
+
+.inputtext input {
+    padding: 16px 12px; /* Increased padding for larger input fields */
+    font-size: 16px; /* Increased font size for better readability */
+    border: 1px solid #ACB1C3;
+    border-radius: 8px;
+    transition: all 0.2s;
+    box-shadow: 0 0 0 0 #FFFFFF;
+    height: 50px; /* Increased height for a larger input field */
+}
+
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    max-width: 480px; /* Matched with the input fields width */
+    align-items: center;
+    justify-content: space-between; /* Adjusted for better spacing */
+    gap: 12px;
+}
+
+.button {
+    flex-grow: 1; /* Allows button to fill the space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px; /* Increased padding for a larger button */
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button.button--disabled {
+    background-color: #f0f0f0; /* Lighter gray for disabled state */
+    color: #888; /* Darker text to remain readable */
+    cursor: not-allowed;
+}
+
+.button .button-label {
+    font-size: 16px; /* Increased font size for better readability */
+    font-weight: 500;
+}
+
+.button.button--md .ti {
+    font-size: 20px; /* Increased size for icons */
+}
+
+/* Add these styles if you need hover effects on buttons */
+.button:not(.button--disabled):hover {
+    background-color: #e0e0e0;
+}

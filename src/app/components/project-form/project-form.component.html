@@ -1,0 +1,59 @@
+<!-- <div class="p-fluid">
+  <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+    <div class="p-field">
+      <label for="projectName">Project Name</label>
+      <input id="projectName" type="text" pInputText formControlName="projectName">
+    </div>
+    <div class="p-field">
+      <label for="city">City</label>
+      <input id="city" type="text" pInputText formControlName="city">
+    </div>
+    <div class="p-field">
+      <label for="address">Address</label>
+      <input id="address" type="text" pInputText formControlName="address">
+    </div>
+    <div class="p-field">
+      <label for="phone">Phone</label>
+      <input id="phone" type="text" pInputText formControlName="phone">
+    </div>
+    <button pButton type="submit" label="{{ submitButtonLabel }}" [disabled]="!projectForm.valid"></button>
+  </form>
+</div> -->
+<div class="wrapper">
+  <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+    <div class="inputtext-wrapper inputtext inputtext--md">
+      <label for="projectName">Project Name<i>*</i></label>
+      <input class="js-control" type="text"  id="projectName" formControlName="projectName" required />
+      <i class="ti ti-check"></i>
+      
+    </div>
+
+    <div class="inputtext-wrapper inputtext inputtext--md">
+      <label for="city">City<i>*</i></label>
+      <input class="js-control" type="text"  id="city" formControlName="city" required />
+      <i class="ti ti-check"></i>
+     
+    </div>
+
+    <div class="inputtext-wrapper inputtext inputtext--md">
+      <label for="address">Address<i>*</i></label>
+      <input class="js-control" type="text"  id="address" formControlName="address" required />
+      <i class="ti ti-check"></i>
+    
+    </div>
+
+    <div class="inputtext-wrapper inputtext inputtext--md">
+      <label for="phone">Phone<i>*</i></label>
+      <input class="js-control" type="text"  id="phone" formControlName="phone" required />
+      <i class="ti ti-check"></i>
+     
+    </div>
+
+    <div class="button-wrapper">
+     
+      <button class="button button--md button--filled button--primary button--full" type="submit" [disabled]="!projectForm.valid">
+        <span class="button-label">{{ submitButtonLabel }}</span>
+      </button>
+    </div>
+  </form>
+</div>
